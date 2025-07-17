@@ -1,0 +1,242 @@
+/*
+  estilos-nosotros.css
+  --------------------
+  Estilos específicos para la página "Nosotros".
+  Incluye fondo, títulos, párrafos, imagen de equipo y footer.
+*/
+
+/* Reset y tipografía base */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+/* Evita el desplazamiento horizontal en todo el sitio */
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Estilo base del body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FAEBD7!important;
+}
+
+/* El main ocupará el espacio disponible entre header y footer */
+main {
+    flex: 1 0 auto;
+}
+
+/* Navbar principal */
+.navbar {
+    background-color: #ffffff !important;
+    height: 78px !important;
+}
+
+/* Estilo del logo */
+.logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+/* Banner, si se usa */
+.banner {
+    position: relative;
+    margin-top: 35px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 35px !important;
+}
+
+/* Título nivel 3 */
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+/* Título nivel 6 */
+h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+/* Párrafos */
+p {
+    font-size: 18px;
+    color: black;
+}
+
+/* Estilos para enlaces dentro de la navbar */
+.navbar .nav-link {
+    color: #000000;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+
+/* Enlace activo o al pasar el cursor */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #FF7F32;
+    font-weight: 600;
+}
+
+/* Botón dentro de la navbar */
+.navbar .boton {
+    background: #FF7F32;
+    color: #fff !important;
+    border-radius: 20px;
+    padding: 6px 18px;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+
+/* Hover del botón en navbar */
+.navbar .boton:hover {
+    background: #FF7F32;
+}
+
+/* Título principal dentro de main */
+main h1 {
+    color: #000000;
+    font-size: 2.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/* Título secundario dentro de main */
+main h2 {
+    color: #000000;
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2.2rem;
+    text-align: center;
+}
+
+/* Animación fade-in básica */
+.animate-fadein {
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Contenido del footer */
+.footer-contenido {
+    text-align: center !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+
+/* Estilo general del footer */
+.footer {
+    background: #ffffff;
+    color: #FF7F32;
+    font-size: 1rem;
+}
+
+/* Enlaces dentro del footer */
+.footer a {
+    color: #FF7F32;
+    margin: 0 0.5rem;
+}
+
+/* Keyframes para animación fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase para animación de subida */
+.animate-up {
+    animation: moveUp 1.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Keyframes para animación moveUp */
+@keyframes moveUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Se repite por error pero sirve para asegurar el formato del footer */
+.footer-contenido {
+    text-align: center !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+
+/* Ajuste del espaciado para filas dentro de main */
+main .row {
+    margin-bottom: 0;
+}
+
+/* Párrafos con formato mejorado en la página nosotros */
+main p {
+    color: #000000;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Imagen del equipo en sección centrada */
+.col-lg-6.text-center img {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+/* Responsive para móviles (menos de 480px) */
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        height: auto !important;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+/* Responsive para tablets (481px - 900px) */
+@media screen and (max-width: 900px) and (min-width: 481px) {
+
+    .navbar {
+        height: auto !important;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,269 @@
+/*
+  estilos-visitanos.css
+  ---------------------
+  Estilos para la página de ubicación/contacto.
+  Incluye mapa, información de contacto, horario, navbar y footer.
+*/
+
+/* Reset y tipografía base */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* Incluye padding y borde en el tamaño total del elemento */
+    font-family: Raleway, sans-serif;
+    /* Fuente base del sitio */
+}
+
+/* Layout general y fondo */
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #FAEBD7;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.contacto-main-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contacto-form-col {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+    padding: 32px 28px;
+    min-width: 340px;
+    max-width: 400px;
+    flex: 1 1 340px;
+}
+
+.contacto-title {
+    color: #1a2a36;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.contacto-form label {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #3F7CAC;
+    font-size: 1rem;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    background: #f7f7f7;
+    transition: border-color 0.2s;
+}
+
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+    border-color: #3F7CAC;
+    outline: none;
+}
+
+.contacto-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+.contacto-form .boton {
+    width: 120px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 0;
+    border-radius: 6px;
+    background-color: #FF7F32 !important;
+    color: #fff !important;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.contacto-form .boton:hover {
+    background-color: #fff !important;
+    color: #FF7F32 !important;
+    border: 2px solid #FF7F32 !important;
+}
+
+.contacto-info-col {
+    background: none;
+    min-width: 340px;
+    max-width: 420px;
+    flex: 1 1 340px;
+    padding: 0 10px;
+}
+
+.contacto-direccion {
+    color: #222;
+    font-size: 1.08rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.contacto-horario {
+    background: none;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #222;
+    font-size: 1.08rem;
+}
+
+.contacto-info-contacto {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #474747;
+    padding-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.contacto-info-contacto strong,
+.contacto-horario strong {
+    font-weight: 700;
+    font-size: 1.09rem;
+}
+
+.contacto-info-contacto .row,
+.contacto-horario .row {
+    margin-bottom: 0.5rem;
+}
+
+.contacto-horario {
+    padding-top: 0.5rem;
+}
+
+.contacto-titulo {
+    color: #FF7F32;
+}
+
+/* Navbar principal */
+.navbar {
+    background-color: #ffffff !important;
+    height: 78px !important;
+}
+
+/* Estilo de los enlaces activos y al pasar el cursor */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #FF6F00;
+    font-weight: 600;
+}
+
+/* Logo de la clínica */
+.logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+/* Títulos y textos generales */
+h1 {
+    color: #000000;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    color: black;
+}
+
+
+/* Contenido del footer */
+.footer-contenido {
+    text-align: center !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+
+/* Footer */
+.footer {
+    background: #ffffff;
+    color: #FF7F32;
+    font-size: 1rem;
+}
+
+/* Enlaces del footer */
+.footer a {
+    color: #FF7F32;
+    margin: 0 0.5rem;
+}
+
+/* Responsive: pantallas pequeñas (celulares) */
+@media screen and (max-width: 900px) {
+    .contacto-main-row {
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .contacto-form-col,
+    .contacto-info-col {
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px 8px;
+    }
+
+    .contacto-mapa {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .contacto-mapa {
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .navbar {
+        height: auto !important;
+    }
+}

@@ -1,0 +1,146 @@
+/*
+  estilos-servicios.css
+  ---------------------
+  Estilos para la página de servicios veterinarios.
+  Incluye cards de servicios, botones, navbar y footer.
+*/
+
+/* Reset y tipografía base */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+    /* Fuente base */
+}
+
+/* Layout general y fondo */
+html,
+body {
+    max-width: 100vw;
+    /* Previene scroll horizontal */
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    /* Asegura que el body cubra toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    /* Coloca el footer al final */
+    width: 100%;
+    background-color: #FAEBD7 !important;
+    /* Color de fondo claro */
+}
+
+main {
+    flex: 1 0 auto;
+    /* El contenido principal se expande hasta empujar el footer al final */
+}
+
+/* Navbar principal */
+.navbar {
+    background-color: #ffffff !important;
+    height: 78px !important;
+}
+
+/* Logo de la clínica */
+.logo {
+    max-width: 76px;
+    height: 76px;
+}
+
+/* Cards de servicios */
+.card {
+    border-radius: 1.2rem;
+    transition: box-shadow 0.3s, transform 0.3s;
+    /* Suaviza la animación al hacer hover */
+}
+
+/* Hover en cards de servicios */
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+    /* Sombra al pasar el cursor */
+    transform: translateY(-4px) scale(1.03);
+    /* Efecto de elevación */
+}
+
+/* Botones personalizados (primarios y outline) */
+.btn-primary,
+.btn-outline-primary {
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+
+/* Footer */
+.footer {
+    background: #ffffff;
+    color: #FF6F00;
+    font-size: 1rem;
+}
+
+/* Enlaces dentro del footer */
+.footer a {
+    color: #FF6F00;
+    margin: 0 0.5rem;
+}
+
+/* Links activos y hover en navbar */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #FF6F00;
+    font-weight: 600;
+}
+
+/* Animaciones opcionales (fade-in y desplazamiento vertical) */
+.animate-up {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.animate-fadein {
+    opacity: 0;
+}
+
+/* Contenedor del footer */
+.footer-contenido {
+    text-align: center !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+}
+
+.artesania {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área del card */
+}
+.visitanos-section{
+    background-color: #FAEBD7;
+    padding: 20px;
+}
+
+/* Responsive: pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        height: auto !important;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+/* Responsive: tablets y pantallas medianas */
+@media screen and (max-width: 900px) and (min-width: 481px) {
+    .navbar {
+        height: auto !important;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
